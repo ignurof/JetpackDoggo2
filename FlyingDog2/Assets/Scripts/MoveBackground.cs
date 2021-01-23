@@ -5,16 +5,17 @@ using UnityEngine;
 public class MoveBackground : MonoBehaviour
 {
     private bool isStart;
-    public float speed = 6f;
+    public float speed = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
         isStart = false;
-        StartCoroutine(SlowStartTimer());
+        StartCoroutine(MoveBGTimer());
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isStart)
         {
@@ -26,9 +27,11 @@ public class MoveBackground : MonoBehaviour
         }
     }
 
-    IEnumerator SlowStartTimer()
+    IEnumerator MoveBGTimer()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
         isStart = true;
     }
+
+
 }

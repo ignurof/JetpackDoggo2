@@ -8,7 +8,7 @@ public class SpawnObstacle : MonoBehaviour
     private Vector3 leftPos;
     private Vector3 rightPos;
 
-    private bool waitingSpawn;
+    public bool waitingSpawn;
 
     // Limit spawn amounts per position
     private int leftAmount;

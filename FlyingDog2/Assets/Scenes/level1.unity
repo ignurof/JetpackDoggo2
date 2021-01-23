@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 9003600751505545912, guid: 88663c70441455e4099656b26762bf98, type: 3}
+  waitingSpawn: 0
   spawnLeft: -6
   spawnRight: 6
 --- !u!1 &1289708286
@@ -536,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc3a71309f5f404bae04a09aeacd012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 2
 --- !u!1001 &1432334019715543695
 PrefabInstance:
   m_ObjectHideFlags: 0

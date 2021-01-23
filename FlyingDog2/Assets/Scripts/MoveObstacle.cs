@@ -9,7 +9,7 @@ public class MoveObstacle : MonoBehaviour
     private void Start()
     {
         speed = 6f;
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 6);
     }
 
     // Update is called once per frame
