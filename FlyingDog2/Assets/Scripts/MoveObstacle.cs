@@ -17,4 +17,9 @@ public class MoveObstacle : MonoBehaviour
     {
         transform.Translate(0, -1 * speed * Time.deltaTime, 0);
     }
+
+    public void SetSpeed(float x)
+    {
+        speed = x;
+    }
 }

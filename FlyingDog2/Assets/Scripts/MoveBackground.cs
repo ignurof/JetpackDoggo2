@@ -6,6 +6,7 @@ public class MoveBackground : MonoBehaviour
 {
     private bool isStart;
     public float speed = 2f;
+    public GameObject prefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class MoveBackground : MonoBehaviour
             if (transform.position.y <= 0)
             {
                 isStart = false;
+                // Update obstacle speed
+                prefab.GetComponent<MoveObstacle>().SetSpeed(10f);
             }
         }
     }
