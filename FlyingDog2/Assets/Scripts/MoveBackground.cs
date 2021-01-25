@@ -8,7 +8,8 @@ public class MoveBackground : MonoBehaviour
     private bool isStartTwo;
 
     public float speed = 2f;
-    public GameObject prefab;
+
+    public SpeedSO speedSO;
 
     // Keep track of scoreCounter on UpdateScore.cs
     public GameObject scoreObj;
@@ -22,6 +23,10 @@ public class MoveBackground : MonoBehaviour
         isStart = false;
         isStartTwo = false;
         firstCompleted = false;
+
+        // In lack of better place to reset speedSO
+        // I do it here because MoveBackground.cs is present through entire gameplay
+        speedSO.speed = 6f;
     }
 
     private void Update()
@@ -49,7 +54,7 @@ public class MoveBackground : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, 0, transform.position.z);
                 isStart = false;
                 // Update obstacle speed
-                prefab.GetComponent<MoveObstacle>().SetSpeed(10f);
+                speedSO.speed = 10f;
             }
         }
 
@@ -60,7 +65,7 @@ public class MoveBackground : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, -10f, transform.position.z);
                 isStartTwo = false;
-                prefab.GetComponent<MoveObstacle>().SetSpeed(15f);
+                speedSO.speed = 15f;
             }
         }
     }

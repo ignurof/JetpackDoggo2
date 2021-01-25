@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  prefab: {fileID: 9003600751505545912, guid: 88663c70441455e4099656b26762bf98, type: 3}
+  speedSO: {fileID: 11400000, guid: ba99c2257bccd124c8794e6fca2d9ab1, type: 2}
   scoreObj: {fileID: 2143535076}
 --- !u!1 &1328654915
 GameObject:
