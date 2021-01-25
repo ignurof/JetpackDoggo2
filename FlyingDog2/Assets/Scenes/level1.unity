@@ -604,7 +604,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &526414758 stripped
 MonoBehaviour:
@@ -971,6 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   prefab: {fileID: 9003600751505545912, guid: 88663c70441455e4099656b26762bf98, type: 3}
+  scoreObj: {fileID: 2143535076}
 --- !u!1 &1478631455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1299,7 @@ PrefabInstance:
     - target: {fileID: 1972104480728654325, guid: 77b623c6ee7c95249a8645752e1974bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1972104480728654325, guid: 77b623c6ee7c95249a8645752e1974bf,
         type: 3}
