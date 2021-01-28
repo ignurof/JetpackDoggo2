@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public bool isAlive;
     public GameObject pausePanel;
+    public GameObject scoreObj;
 
     private float coolTimer;
 
@@ -27,6 +28,7 @@ public class GameOver : MonoBehaviour
             pausePanel.SetActive(true);
 
             pausePanel.transform.GetChild(4).GetComponent<TMP_Text>().text = "Time: " + coolTimer;
+            scoreObj.transform.localPosition = new Vector3(0, -10f, 0);
         }
     }
 

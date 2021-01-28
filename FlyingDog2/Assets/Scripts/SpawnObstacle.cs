@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObstacle : MonoBehaviour
 {
     public GameObject prefab;
+    public GameObject prefab2;
     private Vector3 leftPos;
     private Vector3 rightPos;
     private Vector3 midPos;
@@ -114,12 +115,16 @@ public class SpawnObstacle : MonoBehaviour
                 }
                 break;
             case 3:
-                if (midAmount >= 0)
+                if (midAmount >= 1)
                 {
-                    Instantiate(prefab, midPos, Quaternion.Euler(0, 0, 0));
-                    midAmount++;
+                    Instantiate(prefab, leftPos, Quaternion.Euler(0, 0, 0));
+                    leftAmount++;
                     rightAmount = 0;
-                    leftAmount = 0;
+                }
+                else
+                {
+                    Instantiate(prefab2, midPos, Quaternion.Euler(0, 0, 0));
+                    midAmount++;
                 }
                 break;
         }
