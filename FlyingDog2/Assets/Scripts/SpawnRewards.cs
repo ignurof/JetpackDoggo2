@@ -35,11 +35,11 @@ public class SpawnRewards : MonoBehaviour
         if (changePos > 5)
         {
             spawnLeft = -8f;
-            spawnRight = 4f;
+            spawnRight = 5f;
 
             if (changePos > 10)
             {
-                spawnLeft = -4f;
+                spawnLeft = -3f;
                 spawnRight = 8f;
             }
 

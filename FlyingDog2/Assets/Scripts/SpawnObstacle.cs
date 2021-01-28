@@ -7,6 +7,7 @@ public class SpawnObstacle : MonoBehaviour
     public GameObject prefab;
     private Vector3 leftPos;
     private Vector3 rightPos;
+    private Vector3 midPos;
 
     public bool waitingSpawn;
 
@@ -15,6 +16,9 @@ public class SpawnObstacle : MonoBehaviour
     private int rightAmount;
     public float spawnLeft = -4f;
     public float spawnRight = 4f;
+
+    // Change position counter
+    public int changePos;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,26 @@ public class SpawnObstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        changePos = GameObject.Find("Canvas").GetComponent<UpdateScore>().scoreAmount;
+        // "Randomize" spawn position based on score amount
+        if (changePos > 5)
+        {
+            spawnLeft = -2f;
+            spawnRight = 3f;
+
+            if (changePos > 10)
+            {
+                spawnLeft = -5f;
+                spawnRight = 6f;
+            }
+
+            if (changePos > 15)
+            {
+                spawnLeft = -6f;
+                spawnRight = 7f;
+            }
+        }
+
         leftPos = transform.position + new Vector3(spawnLeft, 0, 0);
         rightPos = transform.position + new Vector3(spawnRight, 0, 0);
         // Check the random result and spawn obstacle
