@@ -22,6 +22,9 @@ public class SpawnObstacle : MonoBehaviour
     // Change position counter
     public int changePos;
 
+    // Make obstacles go faster based on score
+    public SpeedSO speedSO;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,10 @@ public class SpawnObstacle : MonoBehaviour
         leftAmount = 0;
         rightAmount = 0;
         midAmount = 0;
+
+        // In lack of better place to reset speedSO
+        // I do it here because SpawnObstacle.cs is present through entire gameplay
+        speedSO.speed = 6f;
     }
 
     // Update is called once per frame
@@ -41,12 +48,14 @@ public class SpawnObstacle : MonoBehaviour
             spawnLeft = -2f;
             spawnRight = 3f;
             spawnMid = 1f;
+            speedSO.speed = 7.66f;
 
             if (changePos > 10)
             {
                 spawnLeft = -5f;
                 spawnRight = 6f;
                 spawnMid = -1f;
+                speedSO.speed = 9.66f;
             }
 
             if (changePos > 15)
@@ -54,6 +63,8 @@ public class SpawnObstacle : MonoBehaviour
                 spawnLeft = -6f;
                 spawnRight = 7f;
                 spawnMid = 1f;
+                // Update speed scriptableobject that affects all objects with it assigned
+                speedSO.speed = 12.66f;
             }
         }
 

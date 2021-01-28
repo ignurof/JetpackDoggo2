@@ -1017,8 +1017,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 9003600751505545912, guid: 88663c70441455e4099656b26762bf98, type: 3}
   waitingSpawn: 0
-  spawnLeft: -6
-  spawnRight: 6
+  spawnLeft: -4
+  spawnRight: 4
+  spawnMid: 0
+  changePos: 0
+  speedSO: {fileID: 11400000, guid: ba99c2257bccd124c8794e6fca2d9ab1, type: 2}
 --- !u!1 &1289708286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  speedSO: {fileID: 11400000, guid: ba99c2257bccd124c8794e6fca2d9ab1, type: 2}
   scoreObj: {fileID: 2143535076}
 --- !u!1 &1328654915
 GameObject:
@@ -1416,6 +1418,7 @@ MonoBehaviour:
   waitingSpawn: 0
   spawnLeft: -2
   spawnRight: 2
+  spawnMid: -5
   changePos: 0
 --- !u!4 &1907415054
 Transform:
