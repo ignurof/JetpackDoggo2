@@ -15,8 +15,8 @@ public class SpawnRewards : MonoBehaviour
     private int leftAmount;
     private int rightAmount;
     private int midAmount;
-    public float spawnLeft = -2f;
-    public float spawnRight = 2f;
+    public float spawnLeft = -7f;
+    public float spawnRight = 7f;
     public float spawnMid = -5f;
 
     // Change position counter

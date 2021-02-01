@@ -29,6 +29,9 @@ public class SpawnObstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Need to resume time after replay so always set timescale here to begin game
+        Time.timeScale = 1;
+
         waitingSpawn = true;
         leftAmount = 0;
         rightAmount = 0;
