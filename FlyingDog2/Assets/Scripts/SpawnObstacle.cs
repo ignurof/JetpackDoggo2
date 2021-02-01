@@ -31,6 +31,8 @@ public class SpawnObstacle : MonoBehaviour
     {
         // Need to resume time after replay so always set timescale here to begin game
         Time.timeScale = 1;
+        // Reset audio
+        AudioListener.pause = false;
 
         waitingSpawn = true;
         leftAmount = 0;

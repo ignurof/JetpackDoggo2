@@ -25,6 +25,7 @@ public class GameOver : MonoBehaviour
         {
             // Pause time
             Time.timeScale = 0;
+            AudioListener.pause = true;
             // Activate UI
             pausePanel.SetActive(true);
 
