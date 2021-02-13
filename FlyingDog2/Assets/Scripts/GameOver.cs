@@ -36,6 +36,9 @@ public class GameOver : MonoBehaviour
 
     public void QuitGame()
     {
+        SceneManager.LoadScene(0);
+        /*
+         * OLD WAY, this is useful for future reference
         // save any game data here
 #if UNITY_EDITOR
         // Application.Quit() does not work in the editor so
@@ -44,6 +47,7 @@ public class GameOver : MonoBehaviour
 #else
         Application.Quit();
 #endif
+        */
     }
 
     public void ReplayGame()
