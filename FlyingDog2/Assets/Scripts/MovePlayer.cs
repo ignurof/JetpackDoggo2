@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class MovePlayer : MonoBehaviour
 {
-    public float speed = 6f;
+    public SpeedSO speedSO;
+    private float speed;
 
     // Vector2 is like GetAxis
     private Vector2 direction;
@@ -23,6 +24,9 @@ public class MovePlayer : MonoBehaviour
             transform.position = new Vector2(-8f, transform.position.y);
         else if (transform.position.x >= 8f)
             transform.position = new Vector2(8f, transform.position.y);
+
+        // Adjust speed based on ObstacleSpeed
+        speed = speedSO.speed + 2f;
 
         // For example, when we hold D, x is 1, if we hold A, x is -1
         transform.Translate(direction.x * speed * Time.deltaTime, 0, 0);
